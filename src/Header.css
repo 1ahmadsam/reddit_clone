@@ -1,0 +1,105 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #1a1a1b;
+  top: 0;
+  position: sticky;
+  z-index: 100;
+  align-items: center;
+  height: 48px;
+  border-bottom: 1px solid #343537;
+}
+.header__left {
+  padding-left: 20px;
+}
+.header__center {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 40px;
+}
+.header__search {
+  width: 100%;
+  max-width: 650px;
+}
+.header__searchIcon {
+  position: absolute;
+  padding-top: 7px;
+  padding-left: 10px;
+  width: 18px;
+  height: 18px;
+  color: #818384;
+}
+.header__searchInput {
+  width: 100%;
+  appearance: none;
+  background-color: #272729;
+  border-radius: 4px;
+  border: 1px solid #343536;
+  box-shadow: none;
+  color: #d7dadc;
+  display: block;
+  height: 36px;
+  outline: none;
+  padding-left: 40px;
+}
+
+.header__right {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header__right > button {
+  border: 1px solid #d7dadc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 3px 16px;
+}
+@media (min-width: 1180px) {
+  .header__right > button {
+    width: 120px;
+  }
+}
+.header__option {
+  color: #818384;
+}
+
+.header__logo {
+  object-fit: contain;
+  height: 28px;
+}
+
+.header__buttonLogin {
+  background-color: transparent;
+  color: #d7dadc;
+  margin-left: 8px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.header__buttonSignup {
+  margin-right: 16px;
+  background-color: #d7dadc;
+
+  cursor: pointer;
+}
+
+.header__option {
+  margin-right: 24px;
+}
