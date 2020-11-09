@@ -83,6 +83,7 @@
 .header__logo {
   object-fit: contain;
   height: 28px;
+  cursor: pointer;
 }
 
 .header__buttonLogin {

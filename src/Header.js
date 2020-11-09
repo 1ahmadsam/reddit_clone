@@ -9,18 +9,31 @@ const Header = () => {
   const [search, setSearch] = useState('');
   const [{ query }, dispatch] = useStateValue();
 
+  const handleReset = (e) => {
+    e.preventDefault();
+    setSearch('');
+    dispatch({
+      type: 'CHANGE_QUERY',
+      item: 'popular',
+    });
+  };
   const setQuery = (e) => {
     e.preventDefault();
     dispatch({
       type: 'CHANGE_QUERY',
-      item: search,
+      item: search ? search : 'popular',
     });
   };
 
   return (
     <div className='header'>
       <div className='header__left'>
-        <img className='header__logo' src={redditLogo} alt='reddit' />
+        <img
+          className='header__logo'
+          src={redditLogo}
+          alt='reddit'
+          onClick={handleReset}
+        />
       </div>
       <div className='header__center'>
         <form className='header__search' onSubmit={setQuery}>
@@ -31,6 +44,7 @@ const Header = () => {
           <input
             className='header__searchInput'
             type='text'
+            value={search}
             placeholder='Search'
             onChange={(event) => setSearch(event.target.value)}
           />
